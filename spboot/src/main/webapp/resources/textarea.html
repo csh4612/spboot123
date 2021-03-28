@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<textarea id="content" rows="10"></textarea>
+<button onclick="checkContent()">확인</button>
+<div id="rDiv"></div>
+
+<script>
+function checkContent(){
+	var content = document.querySelector('#content');
+	var enterTexts = content.value.split('\n');
+	//alert(enterTexts.length);
+	document.querySelector('#rDiv').innerHTML = enterTexts.join('<br>');
+	
+	/*var str="1,2,3";
+	var ns = str.split(',');
+	str=ns.join('and');
+	alert(str);*/
+}
+</script>
+</body>
+</html>
