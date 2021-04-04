@@ -11,6 +11,7 @@
 <input type="number" id="fiPrice" placeholder="가격"><br>
 <input type="text" id="fiType" placeholder="타입"><br>
 <textarea id="fiDesc" placeholder="설명"></textarea><br>
+
 <button onclick="doInsert()">음식 등록</button>
 
 <script>
@@ -31,6 +32,9 @@ function doInsert(){
 			fiPrice : document.querySelector('#fiPrice').value,
 			fiType : document.querySelector('#fiType').value,
 			fiDesc : document.querySelector('#fiDesc').value,
+			customerInfo : {
+				cuiNum : ${customerInfo.cuiNum}
+			}
 	};
 	xhr.setRequestHeader('Content-Type','application/json;charset=UTF-8');
 	xhr.send(JSON.stringify(param));
